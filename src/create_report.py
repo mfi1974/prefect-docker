@@ -6,7 +6,7 @@ from prefect.blocks.system import Secret
 
 @task
 def get_dp_token():
-    secret_block = Secret.load("ac7df3eb97007708500bbd68245ca5f52c9f30a9")
+    secret_block = Secret.load("datapane-token")
 
     # Access the stored secret
     return secret_block.get()
